@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>西安电子科技大学二手交易网-管理员登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="../css.css" rel="stylesheet" type="text/css">
+</head>
+<body><br><br><br>
+<form name="admininfo" method="post" action="chkadmin.asp" >
+  <table width="250" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#6699cc" height="147">
+    <tr> 
+      <td align="center" height="15" bgcolor="#F2F2F2">管理员登录</td>
+    </tr>
+    <tr> 
+      <td bgcolor="#FFFFFF" height="110"> 
+    <table  width="178" border="0" align="center" cellpadding="1" cellspacing="1">
+          <tr bgcolor="#FFFFFF"> 
+            <td width="64">管理员：</td>
+            <td width="107"><input name="admin" type="text" id="admin" size="12"></td>
+          </tr>
+          <tr bgcolor="#FFFFFF"> 
+            <td>密　码：</td>
+            <td><input name="password" type="password" id="password" size="12"></td>
+          </tr>
+          <tr bgcolor="#FFFFFF"> 
+            <td colspan="2" align="center"><input  onClick="return check();" type="submit" name="Submit" value="登 录">
+                &nbsp; <input  type="reset" name="Submit2" value="清 除" >
+              </td>
+          </tr>
+        </table>
+       </td>
+    </tr>
+    <tr>
+      <td bgcolor="#F2F2F2" height="12">
+      <p align="center">版权所有：西电二手交易网</td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+<script LANGUAGE="javascript">
+<!--
+function checkspace(checkstr) {
+  var str = '';
+  for(i = 0; i < checkstr.length; i++) {
+    str = str + ' ';
+  }
+  return (str == checkstr);
+}
+function check()
+{
+  if(checkspace(document.admininfo.admin.value)) {
+	document.admininfo.admin.focus();
+    alert("管理员用户名不能为空！");
+	return false;
+  }
+  if(checkspace(document.admininfo.password.value)) {
+	document.admininfo.password.focus();
+    alert("密码不能为空！");
+	return false;
+  }
+	document.admininfo.submit();
+  }
+//-->
+</script>
